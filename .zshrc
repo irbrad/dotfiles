@@ -8,6 +8,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Python.framework/Versions/Current/bin:~/bin
 export MONO_GAC_PREFIX='/usr/local'
 export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+export P4IGNORE='~/.p4ignore'
 
 alias gl='git log --pretty=oneline'
 alias gap='git add -p'
