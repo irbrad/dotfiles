@@ -77,9 +77,9 @@ vnoremap <tab> %
 
 " Wrap column settings
 set wrap
-set textwidth=82
+set textwidth=122
 set formatoptions=qrn1
-set colorcolumn=85
+set colorcolumn=120
 
 " Enable mouse in CLI
 set mouse=a
