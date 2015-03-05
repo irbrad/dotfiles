@@ -1,3 +1,33 @@
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Bundle 'wookiehangover/jshint.vim'
+Bundle 'nfvs/vim-perforce'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
 " Requires for 256 colors in OS X iTerm(2)
 set t_Co=256
 
@@ -58,6 +88,9 @@ let g:gist_clip_command = 'pbcopy'
 set background=dark
 let g:solarized_termcolors=256
 
+" Perforce settings
+let g:perforce_open_on_save = 1
+
 " Default search with \v
 nnoremap / /\v
 vnoremap / /\v
@@ -113,7 +146,7 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
-nnoremap ; :
+" nnoremap ; :
 
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>v V`]
@@ -136,3 +169,11 @@ colorscheme molokai
 augroup mkd
   autocmd BufRead *.md  set ai formatoptions=tcroqn2 comments=n:&gt;
 augroup END
+
+function! StartUp()
+    if 0 == argc()
+        NERDTree
+    end
+endfunction
+
+autocmd VimEnter * call StartUp()
