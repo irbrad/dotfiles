@@ -130,7 +130,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <leader>4 caw$(<Esc>pa)<Esc>
 
 " Color scheme
-colorscheme solarized
+colorscheme molokai
 
 " Markdown
 augroup mkd
