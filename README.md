@@ -14,6 +14,12 @@ cd ~
 rm -rf dotfiles
 ```
 
+To install bundles in vim:
+```
+:BundleInstall
+```
+
+And then follow the [instructions for building code-completion in YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+
 Use at your own risk. There is NO warranty!
 
-*README.md "borrowed" from @TooTallNate*
