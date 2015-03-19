@@ -9,7 +9,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-Bundle 'wookiehangover/jshint.vim'
+"Bundle 'wookiehangover/jshint.vim'
+Plugin 'scrooloose/syntastic'
 Bundle 'nfvs/vim-perforce'
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
