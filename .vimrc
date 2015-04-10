@@ -9,10 +9,10 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-"Bundle 'wookiehangover/jshint.vim'
 Plugin 'scrooloose/syntastic'
 Bundle 'nfvs/vim-perforce'
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'joonty/vdebug.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -28,10 +28,6 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
-
-" Requires for 256 colors in OS X iTerm(2)
-set t_Co=256
 
 filetype off
 
@@ -86,10 +82,6 @@ set undodir=~/.vim/undo
 let mapleader = ","
 let g:gist_clip_command = 'pbcopy'
 
-" Settings for Solarized theme
-set background=dark
-let g:solarized_termcolors=256
-
 " Perforce settings
 let g:perforce_open_on_save = 1
 
@@ -112,9 +104,9 @@ vnoremap <tab> %
 
 " Wrap column settings
 set wrap
-set textwidth=122
+set textwidth=102
 set formatoptions=qrn1
-set colorcolumn=120
+set colorcolumn=100
 
 " Enable mouse in CLI
 set mouse=a
@@ -144,6 +136,8 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <leader>1 yypVr=
 
+nnoremap @clip "*y
+
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
@@ -165,12 +159,23 @@ nnoremap <C-l> <C-w>l
 nnoremap <leader>4 caw$(<Esc>pa)<Esc>
 
 " Color scheme
+"set background=dark
+"colorscheme solarized
 colorscheme molokai
 
 " Markdown
 augroup mkd
   autocmd BufRead *.md  set ai formatoptions=tcroqn2 comments=n:&gt;
 augroup END
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
 
 function! StartUp()
     if 0 == argc()
