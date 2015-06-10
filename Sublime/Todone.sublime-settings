@@ -12,6 +12,6 @@
     "tab_size": 8,
     "translate_tabs_to_spaces": false,
     "color_scheme": "Packages/ToDone/Monokai_todone.hidden-tmTheme",
-    "margin": 8
+    "margin": 8,
     "draw_white_space": "none"
 }
