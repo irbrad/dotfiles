@@ -1,0 +1,16 @@
+{
+    "extensions":
+    [
+        "todo",
+        "todone"
+    ],
+
+    "fold_buttons": true,
+    "fade_fold_buttons": false,
+    "rulers": [],
+    "spell_check": false,
+    "tab_size": 8,
+    "translate_tabs_to_spaces": false,
+    "color_scheme": "Packages/ToDone/Monokai_todone.hidden-tmTheme",
+    "margin": 8
+}
